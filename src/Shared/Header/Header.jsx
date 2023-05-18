@@ -19,7 +19,8 @@ const handleLogOut= () =>{
         <div className="navbar bg-base-200">
   <div className="navbar-start">
     
-    <p className="btn btn-ghost normal-case text-xl">Sports <span className="text-purple-800 ml-1"> Zone </span> </p>
+   
+    <img className="w-28 h-24" src="https://i.ibb.co/QkG2t7r/attachment-62129397-removebg-preview-removebg-preview.png"  />
   </div>
   <div className="navbar-center hidden lg:flex">
     <ul className="menu menu-horizontal px-1">
