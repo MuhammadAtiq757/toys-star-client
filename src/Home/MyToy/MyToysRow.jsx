@@ -1,4 +1,5 @@
 import { data } from "autoprefixer";
+import { Link } from "react-router-dom";
 
 
 const MyToysRow = ({ toy, handleDelete }) => {
@@ -29,7 +30,10 @@ const MyToysRow = ({ toy, handleDelete }) => {
 
 
             <th>
-                <button className="btn btn-ghost btn-xs">details</button>
+                
+            <button className="btn btn-ghost btn-xs">details</button>
+
+                
             </th>
         </tr>
     );

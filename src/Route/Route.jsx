@@ -8,6 +8,8 @@ import MyToy from "../Home/MyToy/MyToy";
 import AllToys from "../Home/AllToys/AllToys";
 import Error from "../Home/Error/Error";
 import PrivateRoute from "./PrivateRoute";
+import ToysDetails from "../Home/MyToy/ToysDetails";
+import Blog from "../Home/Home/Blog/Blog";
 
 const router = createBrowserRouter([
     {
@@ -44,17 +46,25 @@ const router = createBrowserRouter([
             },
 
             {
+                path: '/toyDetails/:id',
+                element:<PrivateRoute> <ToysDetails></ToysDetails></PrivateRoute>,
+                loader: ({params}) => fetch(`https://toys-market-server-muhammadatiq757.vercel.app/toyDetails/${params.id}`)
+            },
+
+            {
 
                 path: '/alltoy',
                 element: <AllToys></AllToys>,
-                loader: () => fetch('http://localhost:5000/alltoy')
+     loader: () => fetch('https://toys-market-server-muhammadatiq757.vercel.app/alltoy')
 
 
             },
-            // {
-            //     path: "*",
-            //     element: <img src="https://cdn.mos.cms.futurecdn.net/PuXipAW3AXUzUJ4uYyxPKC-1200-80.jpg" alt="" />
-            // }
+           {
+           
+            path: '/blog',
+            element: <Blog></Blog>
+
+           }
 
         ]
     },

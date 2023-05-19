@@ -39,7 +39,7 @@ const Header = () => {
 
           </div>
 
-          <li><a>Blogs</a></li>
+          <li><Link to ='/blog'>Blogs</Link></li>
 
           <div className="flex items-center gap-4">
 
