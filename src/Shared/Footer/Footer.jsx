@@ -9,7 +9,7 @@ const Footer = () => {
           <img className="h-32 w-40" src="https://i.ibb.co/QkG2t7r/attachment-62129397-removebg-preview-removebg-preview.png" alt="" />
         
           <p className="font-bold">
-            ACME Industries Ltd. <br/>Providing reliable tech since 1992
+            Toy Stars Ltd. <br/>Providing reliable tech since 1992
           </p> 
           <p>Copyright © 2023 - All right reserved</p>
         </div> 

@@ -46,9 +46,7 @@ const handleGoogleSignIn =() =>{
         <div>
             <div className="hero min-h-screen bg-base-200">
             <div className="hero-content flex-col  lg:flex-row">
-                <div className="w-1/2 mr-12">
-                    <img src={img} alt="" />
-                </div>
+              
                 <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
                     <div className="card-body">
                         <h1 className="text-3xl text-center font-bold">Login</h1>
@@ -75,10 +73,10 @@ const handleGoogleSignIn =() =>{
                                 <input className=" btn   bg-blue-500" type="submit" value="Login" />
                             </div>
                             <div className='form-control mt-6'>
-<button onClick={handleGoogleSignIn}>Login With Google</button>
+<button className='btn' onClick={handleGoogleSignIn}>Login With Google</button>
                             </div>
                         </form>
-                        <p className='my-4 text-center'>New to Car Doctors ? <Link to='/signup' className='text-blue-500 font-bold'>Sign Up</Link></p>
+                        <p className='my-4 text-center'>New to Toy stars ? <Link to='/signup' className='text-blue-500 font-bold'>Sign Up</Link></p>
                     </div>
                 </div>
             </div>
