@@ -10,6 +10,8 @@ import Error from "../Home/Error/Error";
 import PrivateRoute from "./PrivateRoute";
 import ToysDetails from "../Home/MyToy/ToysDetails";
 import Blog from "../Home/Home/Blog/Blog";
+import Tabular from "../Home/Tabular/Tabular";
+import UpdateToys from "../Home/MyToy/UpdateToys";
 
 const router = createBrowserRouter([
     {
@@ -47,24 +49,37 @@ const router = createBrowserRouter([
 
             {
                 path: '/toyDetails/:id',
-                element:<PrivateRoute> <ToysDetails></ToysDetails></PrivateRoute>,
-                loader: ({params}) => fetch(`https://toys-market-server-muhammadatiq757.vercel.app/toyDetails/${params.id}`)
+                element: <PrivateRoute> <ToysDetails></ToysDetails></PrivateRoute>,
+                loader: ({ params }) => fetch(`https://toys-market-server-muhammadatiq757.vercel.app/toyDetails/${params.id}`)
             },
 
             {
 
                 path: '/alltoy',
                 element: <AllToys></AllToys>,
-     loader: () => fetch('https://toys-market-server-muhammadatiq757.vercel.app/alltoy')
+                loader: () => fetch('https://toys-market-server-muhammadatiq757.vercel.app/alltoy')
 
 
             },
-           {
-           
-            path: '/blog',
-            element: <Blog></Blog>
+            {
 
-           }
+                path: '/blog',
+                element: <Blog></Blog>
+
+            },
+
+            {
+                path: '/tab',
+                element: <Tabular></Tabular>,
+               
+            },
+
+            {
+
+               path: '/updateToy/:id',
+               element: <UpdateToys></UpdateToys>,
+               loader: ({params}) => fetch(`https://toys-market-server-muhammadatiq757.vercel.app/toyDetails/${params.id}`)
+            }
 
         ]
     },
