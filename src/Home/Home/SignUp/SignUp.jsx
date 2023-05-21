@@ -4,7 +4,7 @@ import { AuthContext } from "../../../Provider/AuthProvider";
 import { updateProfile } from "firebase/auth";
 
 const SignUp = () => {
-    const [error, setError] = useState('')
+    const [some, setSome] = useState('')
     const {createUser} = useContext(AuthContext);
 
     const handleSignUp = event => {
@@ -21,11 +21,11 @@ const SignUp = () => {
       .then(result =>{
        const loggedUser = result.user;
        console.log(loggedUser);
-       updateUserProfile = (result.user, name, photo)
+       updateUserProfile (result.user, name, photo)
       })
 
       .catch(error =>{ console.log(error)
-      setError(error.message)
+      setSome(error.message)
     })
 
     const updateUserProfile = (user, name, photo)=>{
@@ -38,10 +38,11 @@ const SignUp = () => {
 
             const updateUser = result.user;
             console.log(updateUser);
-            setError('')
+            setSome('')
         })
         .catch(error =>{
-            setError('')
+            error.message(error)
+            setSome('')
         })
     }
    
