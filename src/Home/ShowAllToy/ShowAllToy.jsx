@@ -11,7 +11,7 @@ const ShowAllToy = ({ toys }) => {
     const [jobs, setJobs] = useState([]);
 
     const handleSearch = () => {
-        fetch(`http://localhost:5000/getNameText/${searchText}`)
+        fetch(`https://toys-market-server-muhammadatiq757.vercel.app/getNameText/${searchText}`)
           .then((res) => res.json())
           .then((data) => {
             console.log(data);

@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
-import { Link, useLoaderData } from "react-router-dom";
+import { Link,  } from "react-router-dom";
 
 
 const AllToys = () => {
-    // const alltoy = useLoaderData()
+ 
     const [find, setFind] = useState('')
  const [alltoy, setAlltoy ] = useState([])
     useEffect(() => {
@@ -17,7 +17,7 @@ const AllToys = () => {
 
 
     const handleFind = ()=>{
-      fetch(`http://localhost:5000/findName/${find}`)
+      fetch(`https://toys-market-server-muhammadatiq757.vercel.app/findName/${find}`)
       .then(res => res.json())
       .then (data => setAlltoy(data))
 
@@ -27,9 +27,11 @@ const AllToys = () => {
             <div className="overflow-x-auto w-full">   
 
             <div className="form-control">
-  <div className="input-group">
-    <input onChange={e => setFind(e.target.value)} type="text" placeholder="Search…" className="input input-bordered" />
-    <button onClick={handleFind} className="btn btn-active">Button</button>
+  <div className="input-group ">
+   <div className="mx-auto  items-center m-6">
+   <input onChange={e => setFind(e.target.value)} type="text" placeholder="Search…" className="input input-bordered" />
+    <button onClick={handleFind} className=" ml-2 btn btn-active">Search</button>
+   </div>
   </div>
 </div>             
                             

@@ -70,7 +70,9 @@ const router = createBrowserRouter([
 
             {
                 path: '/tab',
-                element: <Tabular></Tabular>,
+                element: <PrivateRoute>
+                    <Tabular></Tabular>
+                </PrivateRoute>,
                
             },
 

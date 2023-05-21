@@ -1,6 +1,5 @@
 
 
-import img from '../../assets/images/login.jpg'
 import { Link } from "react-router-dom";
 import { GoogleAuthProvider, getAuth, signInWithPopup } from 'firebase/auth';
 import app from '../../Firebase/firebase.config';
